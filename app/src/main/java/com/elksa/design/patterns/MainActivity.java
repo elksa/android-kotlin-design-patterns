@@ -7,6 +7,7 @@ import android.widget.TextView;
 import com.elksa.design.patterns.behavioral.template_method.AbstractClass;
 import com.elksa.design.patterns.behavioral.template_method.ConcreteClassA;
 import com.elksa.design.patterns.structural.facade.structural.FacadeStructural;
+import com.elksa.design.patterns.structural.proxy.structural.Proxy;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,5 +33,10 @@ public class MainActivity extends AppCompatActivity {
         TextView txtTemplateMethod = findViewById(R.id.txt_template_method);
         AbstractClass ac = new ConcreteClassA();
         txtTemplateMethod.setText(ac.templateMethod());
+
+        // Proxy
+        TextView txtProxy = findViewById(R.id.txt_proxy);
+        Proxy proxy = new Proxy();
+        txtProxy.setText(proxy.request());
     }
 }
