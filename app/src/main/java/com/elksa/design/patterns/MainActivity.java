@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.elksa.design.patterns.behavioral.command.structural.Command;
+import com.elksa.design.patterns.behavioral.command.structural.ConcreteCommand;
+import com.elksa.design.patterns.behavioral.command.structural.Invoker;
+import com.elksa.design.patterns.behavioral.command.structural.Receiver;
 import com.elksa.design.patterns.behavioral.template_method.AbstractClass;
 import com.elksa.design.patterns.behavioral.template_method.ConcreteClassA;
 import com.elksa.design.patterns.structural.facade.structural.FacadeStructural;
@@ -38,5 +42,15 @@ public class MainActivity extends AppCompatActivity {
         TextView txtProxy = findViewById(R.id.txt_proxy);
         Proxy proxy = new Proxy();
         txtProxy.setText(proxy.request());
+
+        // Command
+        TextView txtCommand = findViewById(R.id.txt_command);
+        // Create receiver, command, and invoker
+        Receiver receiver = new Receiver();
+        Command command = new ConcreteCommand(receiver);
+        Invoker invoker = new Invoker();
+        // Set and execute command
+        invoker.setCommand(command);
+        txtCommand.setText(invoker.executeCommand());
     }
 }
