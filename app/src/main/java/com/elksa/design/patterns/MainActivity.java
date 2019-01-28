@@ -8,6 +8,9 @@ import com.elksa.design.patterns.behavioral.command.structural.Command;
 import com.elksa.design.patterns.behavioral.command.structural.ConcreteCommand;
 import com.elksa.design.patterns.behavioral.command.structural.Invoker;
 import com.elksa.design.patterns.behavioral.command.structural.Receiver;
+import com.elksa.design.patterns.behavioral.memento.structural.Caretaker;
+import com.elksa.design.patterns.behavioral.memento.structural.Memento;
+import com.elksa.design.patterns.behavioral.memento.structural.Originator;
 import com.elksa.design.patterns.behavioral.template_method.AbstractClass;
 import com.elksa.design.patterns.behavioral.template_method.ConcreteClassA;
 import com.elksa.design.patterns.structural.facade.structural.FacadeStructural;
@@ -52,5 +55,27 @@ public class MainActivity extends AppCompatActivity {
         // Set and execute command
         invoker.setCommand(command);
         txtCommand.setText(invoker.executeCommand());
+
+        // Memento
+        Originator originator = new Originator("State 1");
+        Caretaker caretaker = new Caretaker();
+        caretaker.storeMemento(originator.createMemento());
+        originator.setState("State 2");
+        caretaker.storeMemento(originator.createMemento());
+        originator.setState("State 3");
+        caretaker.storeMemento(originator.createMemento());
+
+        StringBuilder mementos = new StringBuilder();
+        Memento memento;
+       do {
+           memento = caretaker.getPreviousMemento();
+           if (memento != null) {
+               originator.restoreMemento(memento);
+               mementos.append(originator.getState()).append("\n");
+           }
+       }
+       while (memento != null);
+       TextView txtMemento = findViewById(R.id.txt_memento);
+       txtMemento.setText(mementos.toString());
     }
 }
