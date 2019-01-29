@@ -8,6 +8,8 @@ import com.elksa.design.patterns.behavioral.command.structural.Command;
 import com.elksa.design.patterns.behavioral.command.structural.ConcreteCommand;
 import com.elksa.design.patterns.behavioral.command.structural.Invoker;
 import com.elksa.design.patterns.behavioral.command.structural.Receiver;
+import com.elksa.design.patterns.behavioral.memento.real.ProspectMemory;
+import com.elksa.design.patterns.behavioral.memento.real.SalesProspect;
 import com.elksa.design.patterns.behavioral.memento.structural.Caretaker;
 import com.elksa.design.patterns.behavioral.memento.structural.Memento;
 import com.elksa.design.patterns.behavioral.memento.structural.Originator;
@@ -67,15 +69,35 @@ public class MainActivity extends AppCompatActivity {
 
         StringBuilder mementos = new StringBuilder();
         Memento memento;
-       do {
-           memento = caretaker.getPreviousMemento();
-           if (memento != null) {
-               originator.restoreMemento(memento);
-               mementos.append(originator.getState()).append("\n");
-           }
-       }
-       while (memento != null);
-       TextView txtMemento = findViewById(R.id.txt_memento);
-       txtMemento.setText(mementos.toString());
+        do {
+            memento = caretaker.getPreviousMemento();
+            if (memento != null) {
+                originator.restoreMemento(memento);
+                mementos.append(originator.getState()).append("\n");
+            }
+        }
+        while (memento != null);
+        TextView txtMemento = findViewById(R.id.txt_memento);
+        txtMemento.setText(mementos.toString());
+
+        // Memento real world example
+        SalesProspect s = new SalesProspect();
+        s.setName("Noel van Halen");
+        s.setPhone("(412) 256-0990");
+        s.setBudget(25000.0F);
+
+        // Store internal state
+
+        ProspectMemory m = new ProspectMemory();
+        m.setMemento(s.createMemento());
+
+        // Continue changing originator
+
+        s.setName("Leo Welch");
+        s.setPhone("(310) 209-7111");
+        s.setBudget(1000000.0F);
+
+        // Restore saved state
+        s.restoreState(m.getMemento());
     }
 }
