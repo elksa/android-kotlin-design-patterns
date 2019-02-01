@@ -1,4 +1,4 @@
-package com.elksa.design.patterns.patterns.creational.structural;
+package com.elksa.design.patterns.patterns.creational.singleton.structural;
 
 /*
  * @author Alejandro Casanova Mutis
