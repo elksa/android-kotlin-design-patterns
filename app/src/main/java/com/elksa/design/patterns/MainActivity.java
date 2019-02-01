@@ -4,19 +4,19 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.elksa.design.patterns.patterns.behavioral.command.structural.Command;
-import com.elksa.design.patterns.patterns.behavioral.command.structural.ConcreteCommand;
-import com.elksa.design.patterns.patterns.behavioral.command.structural.Invoker;
-import com.elksa.design.patterns.patterns.behavioral.command.structural.Receiver;
-import com.elksa.design.patterns.patterns.behavioral.memento.real.ProspectMemory;
-import com.elksa.design.patterns.patterns.behavioral.memento.real.SalesProspect;
-import com.elksa.design.patterns.patterns.behavioral.memento.structural.Caretaker;
-import com.elksa.design.patterns.patterns.behavioral.memento.structural.Memento;
-import com.elksa.design.patterns.patterns.behavioral.memento.structural.Originator;
-import com.elksa.design.patterns.patterns.behavioral.template_method.AbstractClass;
-import com.elksa.design.patterns.patterns.behavioral.template_method.ConcreteClassA;
-import com.elksa.design.patterns.patterns.structural.facade.structural.FacadeStructural;
-import com.elksa.design.patterns.patterns.structural.proxy.structural.Proxy;
+import com.elksa.design.patterns.gof.behavioral.command.structural.Command;
+import com.elksa.design.patterns.gof.behavioral.command.structural.ConcreteCommand;
+import com.elksa.design.patterns.gof.behavioral.command.structural.Invoker;
+import com.elksa.design.patterns.gof.behavioral.command.structural.Receiver;
+import com.elksa.design.patterns.gof.behavioral.memento.real.ProspectMemory;
+import com.elksa.design.patterns.gof.behavioral.memento.real.SalesProspect;
+import com.elksa.design.patterns.gof.behavioral.memento.structural.Caretaker;
+import com.elksa.design.patterns.gof.behavioral.memento.structural.Memento;
+import com.elksa.design.patterns.gof.behavioral.memento.structural.Originator;
+import com.elksa.design.patterns.gof.behavioral.template_method.AbstractClass;
+import com.elksa.design.patterns.gof.behavioral.template_method.ConcreteClassA;
+import com.elksa.design.patterns.gof.structural.facade.structural.FacadeStructural;
+import com.elksa.design.patterns.gof.structural.proxy.structural.Proxy;
 
 public class MainActivity extends AppCompatActivity {
 
