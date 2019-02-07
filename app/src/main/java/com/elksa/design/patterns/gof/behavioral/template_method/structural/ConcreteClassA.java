@@ -1,4 +1,4 @@
-package com.elksa.design.patterns.gof.behavioral.template_method;
+package com.elksa.design.patterns.gof.behavioral.template_method.structural;
 
 public class ConcreteClassA extends AbstractClass {
 

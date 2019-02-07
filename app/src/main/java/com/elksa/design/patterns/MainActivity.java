@@ -13,8 +13,8 @@ import com.elksa.design.patterns.gof.behavioral.memento.real.SalesProspect;
 import com.elksa.design.patterns.gof.behavioral.memento.structural.Caretaker;
 import com.elksa.design.patterns.gof.behavioral.memento.structural.Memento;
 import com.elksa.design.patterns.gof.behavioral.memento.structural.Originator;
-import com.elksa.design.patterns.gof.behavioral.template_method.AbstractClass;
-import com.elksa.design.patterns.gof.behavioral.template_method.ConcreteClassA;
+import com.elksa.design.patterns.gof.behavioral.template_method.structural.AbstractClass;
+import com.elksa.design.patterns.gof.behavioral.template_method.structural.ConcreteClassA;
 import com.elksa.design.patterns.gof.structural.facade.structural.FacadeStructural;
 import com.elksa.design.patterns.gof.structural.proxy.structural.Proxy;
 
