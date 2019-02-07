@@ -17,6 +17,7 @@ import com.elksa.design.patterns.gof.behavioral.template_method.structural.Abstr
 import com.elksa.design.patterns.gof.behavioral.template_method.structural.ConcreteClassA;
 import com.elksa.design.patterns.gof.structural.facade.structural.FacadeStructural;
 import com.elksa.design.patterns.gof.structural.proxy.structural.Proxy;
+import com.elksa.design.patterns.utils.LogcatReader;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -99,5 +100,10 @@ public class MainActivity extends AppCompatActivity {
 
         // Restore saved state
         s.restoreState(m.getMemento());
+
+        // Log
+        TextView txtLog = findViewById(R.id.txt_log);
+        LogcatReader reader = new LogcatReader();
+        txtLog.setText(reader.read());
     }
 }
