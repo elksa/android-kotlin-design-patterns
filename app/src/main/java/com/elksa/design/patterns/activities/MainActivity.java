@@ -1,9 +1,10 @@
-package com.elksa.design.patterns;
+package com.elksa.design.patterns.activities;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.elksa.design.patterns.R;
 import com.elksa.design.patterns.gof.behavioral.command.structural.Command;
 import com.elksa.design.patterns.gof.behavioral.command.structural.ConcreteCommand;
 import com.elksa.design.patterns.gof.behavioral.command.structural.Invoker;
@@ -17,7 +18,7 @@ import com.elksa.design.patterns.gof.behavioral.template_method.structural.Abstr
 import com.elksa.design.patterns.gof.behavioral.template_method.structural.ConcreteClassA;
 import com.elksa.design.patterns.gof.structural.facade.structural.FacadeStructural;
 import com.elksa.design.patterns.gof.structural.proxy.structural.Proxy;
-import com.elksa.design.patterns.utils.LogcatReader;
+import com.elksa.logcatreader.LogcatReader;
 
 public class MainActivity extends AppCompatActivity {
 

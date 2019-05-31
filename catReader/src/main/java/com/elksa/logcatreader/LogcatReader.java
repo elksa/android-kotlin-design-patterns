@@ -1,4 +1,4 @@
-package com.elksa.design.patterns.utils;
+package com.elksa.logcatreader;
 
 import android.util.Log;
 
